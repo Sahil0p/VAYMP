@@ -101,25 +101,25 @@ const ProductCard = ({ data, isEvent }) => {
           <div className="py-2 flex items-center justify-between">
             <div className="flex">
               <h5 className={`${styles.productDiscountPrice}`}>
-              Rs{data.originalPrice === 0
+               ₹{data.originalPrice === 0
                   ? data.originalPrice
                   : data.discountPrice}
-                $
+                
               </h5>
               <h4 className={`${styles.price}`}>
-              {data.originalPrice ? data.originalPrice + "Rs." : null}
+              {data.originalPrice ? "₹" + data.originalPrice  : null}
               </h4>
               {/* <h5>{remainingItems}</h5> */}
               <div>
         {data.stock.map((item, index) => (
           <div key={index}>
-            <h5>{item.size}: {item.quantity} items left</h5>
+            <h5>{item.size}: {item.quantity} Items left</h5>
           </div>
         ))}
       </div>
             </div>
             <span className="font-[400] text-[17px] text-[#68d284]">
-              {data?.sold_out} sold
+              {data?.sold_out} Sold
             </span>
           </div>
         </Link>
